@@ -6,10 +6,17 @@ import router from './router'
 import store from  './store'
 import _ from 'lodash'
 import axios from  './axios'
+import fetch from  './services/http'
 
 Vue.prototype.$axios = axios
+Vue.prototype.fetch = fetch
 Vue.prototype._ = _
 Vue.config.productionTip = false
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log(process.env.NODE_ENV)
+}
+
 
 /* eslint-disable no-new */
 new Vue({
@@ -17,5 +24,16 @@ new Vue({
   router,
   store,
   components: { App },
+  methods:{
+    getMap(){
+      console.log('执行了根实例的方法了...')
+    }
+  },
+  provide: function () {
+    return {
+      getMap: this.getMap
+    }
+  },
+
   template: '<App/>'
 })

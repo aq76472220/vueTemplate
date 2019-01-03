@@ -1,20 +1,27 @@
 <template>
     <div>
         这里是A组件
+        <input ref="input">
     </div>
 </template>
 
 <script>
+
     export default {
+
       name: "",
+      inject: ['getMap'],
       created(){
-       this.$axios.get('broker/product/index',{
-         params: {
-           uid: 17162
-         }}).then((res)=>{
-          console.log(res)
-       })
-      }
+        this.$nextTick(()=>{
+          console.log( this.$refs)
+          // this.$refs.input.focus()
+          this.$refs.input.style.height = 100+'px'
+        })
+        this.getMap()
+      },
+      mounted(){
+
+      },
     }
 </script>
 

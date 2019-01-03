@@ -4,13 +4,14 @@ import A from '@/components/A'
 import B from '@/components/B'
 import C from '@/components/C'
 import vuex from '@/components/vuex'
+import tree from '@/components/tree/tree'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/a',
       name: 'a',
       meta: {
         keepAlive: true // 需要被缓存
@@ -18,7 +19,7 @@ export default new Router({
       component: A
     },
     {
-      path: '/b',
+      path: '/',
       name: 'b',
       component: B
     },
@@ -30,6 +31,12 @@ export default new Router({
     {
       path: '/vuex',
       name: 'vuex',
+      component: vuex
+    },
+    ,
+    {
+      path: '/tree',
+      name: 'tree',
       component: vuex
     }
   ]
