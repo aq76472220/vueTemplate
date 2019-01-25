@@ -5,11 +5,13 @@ import App from './App'
 import router from './router'
 import store from  './store'
 import _ from 'lodash'
-import axios from  './axios'
-import fetch from  './services/http'
 
-Vue.prototype.$axios = axios
-Vue.prototype.fetch = fetch
+
+import {http} from './http/api'
+
+Vue.prototype.$http = http
+
+
 Vue.prototype._ = _
 Vue.config.productionTip = false
 

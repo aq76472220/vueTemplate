@@ -9,17 +9,26 @@
   export default {
     name: 'InputNumber',
     props: {
-      value: {
+      number: {
         type: Number
       }
     },
+    model: {
+      prop: 'number',
+      event: 'change'
+    },
     data () {
       return {
-        currentValue: this.value
+        currentValue: this.number
       }
     },
+    mounted(){
+      this.$on('input',()=>{
+        console.log('我能执行吗？')
+      })
+    },
     watch: {
-      value (val) {
+      number (val) {
         this.currentValue = val;
       }
     },

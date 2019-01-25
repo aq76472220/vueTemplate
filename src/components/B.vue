@@ -2,20 +2,23 @@
     <div>
       这里是B组件
       <input type="text" ref="dateInput" />
-      {{data}}
+
+
+      <a_a></a_a>
     </div>
 </template>
 
 <script>
   import 'pikaday/css/pikaday.css'
+  import a_a from './A/A'
   import  Pikaday from 'Pikaday'
   export default {
+    components:{a_a},
     data(){
       return {
         date:'',
       }
     },
-    name: "b",
     mounted(){
       // var i18n = { // 需要在程序中进行定义，才可以进行汉化
       //   previousMonth : '上个月',
@@ -32,6 +35,12 @@
       //   console.log('我被销毁了...')
       //   picker.destroy()
       // })
+
+
+      this.$http.get('/broker/product/index',{uid:17162}).then((res)=>{
+        console.log(res)
+      })
+
     },
     // beforeDestroy: function () {
     //   this.picker.destroy()

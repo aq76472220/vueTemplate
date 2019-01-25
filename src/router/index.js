@@ -7,7 +7,6 @@ import vuex from '@/components/vuex'
 import tree from '@/components/tree/tree'
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {

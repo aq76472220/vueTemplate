@@ -20,7 +20,9 @@
         this.getMap()
       },
       mounted(){
+        this.$http.get('/broker/product/index?uid=17238').then(()=>{
 
+        })
       },
     }
 </script>

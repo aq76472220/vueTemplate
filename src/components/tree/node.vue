@@ -22,11 +22,11 @@
   </ul>
 </template>
 <script>
-  import iCheckbox from '../checkbox/checkbox.vue';
+  //import iCheckbox from '../checkbox/checkbox.vue';
 
   export default {
     name: 'TreeNode',
-    components: { iCheckbox },
+    //components: { iCheckbox },
     props: {
       data: {
         type: Object,
