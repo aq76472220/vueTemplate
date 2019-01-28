@@ -3,7 +3,7 @@ import router from '../router'
 
 //请求的配置信息
 var config ={
-  baseURL:'https://rrxc.weihubao.com/'
+  baseURL:'https://elm.cangdu.org'
 }
 
 class Http {
