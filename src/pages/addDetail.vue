@@ -34,6 +34,7 @@
       },
       listClickHandle(e,index){
         this.SAVE_ADDDETAIL(this.adressList[index].name)
+        this.$router.go(-1)
       }
     },
   }

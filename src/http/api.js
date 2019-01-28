@@ -17,7 +17,7 @@ class Http {
   interceptorsRequest () { //请求拦截器
     this.axios.interceptors.request.use(function (config) {
       //config.headers['x-token'] = '111111111111' //用户登录的凭证
-      console.log(config)
+      //console.log(config)
       return config;
     }, function (error) {
       console.log(error)
@@ -28,7 +28,7 @@ class Http {
   interceptorsResponse () { //响应拦截器
     this.axios.interceptors.response.use(function (response) {
       //router.push({name:'login'}) //拦截未登录去登录操作
-      console.log(response)
+      //console.log(response)
       if (response && (response.status === 200 )) {
         return response.data
       }
