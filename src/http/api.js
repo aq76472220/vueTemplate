@@ -3,14 +3,16 @@ import router from '../router'
 
 //请求的配置信息
 var config ={
-  baseURL:'https://elm.cangdu.org'
+  baseURL:''
 }
 
 class Http {
   constructor (config){
       this.axios = axios.create({
-        baseURL: config.baseURL,
+        baseURL: config.baseURL
       })
+
+      this.axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
       this.interceptorsRequest() //请求拦截器
       this.interceptorsResponse() //响应拦截器
     }
@@ -40,27 +42,22 @@ class Http {
   }
 
 
-  get(url,params){
+  get(url,params={}){
     return this.axios({
       method: 'get',
       url,
       params, // get 请求时带的参数
       timeout: 10000,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      }
     })
   }
 
-  post(url,params){
+  post(url,params={}){
     return this.axios({
       method: 'post',
       url,
       params, // get 请求时带的参数
       timeout: 10000,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      }
+
     })
   }
 }

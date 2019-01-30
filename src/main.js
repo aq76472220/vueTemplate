@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 import store from  './store'
 import _ from 'lodash'
+import Mint from 'mint-ui';
+Vue.use(Mint);
 
-
+import 'mint-ui/lib/style.css'
+import './assets/css/style.css'
 import {http} from './http/api'
 
 Vue.prototype.$http = http
@@ -31,7 +34,9 @@ new Vue({
       console.log('执行了根实例的方法了...')
     }
   },
-  provide: function () {
+  mounted(){
+  },
+  provide: function () { //边界情况--依赖注入
     return {
       getMap: this.getMap
     }

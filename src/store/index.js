@@ -8,6 +8,7 @@ import mutations from './mutations'
 const state = {
   addAddress:'', //新增地址
   userInfo:null, //用户信息
+  login:false, // 用户是否登录
 }
 
 Vue.use(Vuex)

@@ -1,1 +1,3 @@
 export const SAVE_ADDDETAIL = 'SAVE_ADDDETAIL' //新增地址
+export const RECORD_USERINFO = 'RECORD_USERINFO'
+
