@@ -21,6 +21,13 @@
         adressList:[]
       }
     },
+    updated: function () {
+      console.log(this.inputAdress,'数据更新前...')
+      this.inputAdress
+      this.$nextTick(function () {
+        console.log(this.inputAdress,'数据更新后...')
+      })
+    },
     mounted(){
 
     },
