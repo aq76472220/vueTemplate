@@ -20,7 +20,6 @@
   import {mapMutations, mapState} from 'vuex'
   import { Button ,Toast  } from 'mint-ui';
   import {isNull} from '../utils/util'
-  console.log(isNull)
   export default {
     name: "login",
     components:{

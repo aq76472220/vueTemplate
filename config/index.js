@@ -12,13 +12,13 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://localhost:8001',
+        target: 'http://cangdu.org:8001',
         changeOrigin: true,
         pathRewrite: {
-          '^/': 'http://localhost:8001'
+          '^/': '/'
         }
-      }
-
+      },
+    },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
@@ -39,7 +39,6 @@ module.exports = {
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
     cssSourceMap: true
   },
 

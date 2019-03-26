@@ -1,9 +1,10 @@
 import axios from  'axios'
 import router from '../router'
 
+console.log(process.env.NODE_ENV, '我是请求里面的我到底是什么环境...............')
+
 //请求的配置信息
 var config ={
-  baseURL:''
 }
 
 class Http {
@@ -11,15 +12,16 @@ class Http {
       this.axios = axios.create({
         baseURL: config.baseURL
       })
-
-      this.axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+      this.axios.defaults.headers.post['Content-Type']='application/json;charse=UTF-8'
       this.interceptorsRequest() //请求拦截器
       this.interceptorsResponse() //响应拦截器
     }
   interceptorsRequest () { //请求拦截器
     this.axios.interceptors.request.use(function (config) {
-      //config.headers['x-token'] = '111111111111' //用户登录的凭证
-      //console.log(config)
+      if(config.method == "post"){
+      }
+
+      console.log(config)
       return config;
     }, function (error) {
       console.log(error)
@@ -47,7 +49,7 @@ class Http {
       method: 'get',
       url,
       params, // get 请求时带的参数
-      timeout: 10000,
+      timeout: 10000
     })
   }
 
@@ -56,6 +58,9 @@ class Http {
       method: 'post',
       url,
       params, // get 请求时带的参数
+      transformRequest:[function () { //修复  axios Content-Type 无效的 bug
+        return JSON.stringify(params)
+      }],
       timeout: 10000,
 
     })
