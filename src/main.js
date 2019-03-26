@@ -9,6 +9,7 @@ import Mint from 'mint-ui';
 Vue.use(Mint);
 import 'mint-ui/lib/style.css'
 import './assets/css/style.css'
+import 'swiper/dist/css/swiper.css'
 import {http} from './http/api'
 Vue.prototype.$http = http
 Vue.prototype._ = _

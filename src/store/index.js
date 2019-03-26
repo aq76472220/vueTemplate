@@ -9,6 +9,8 @@ const state = {
   addAddress:'', //新增地址
   userInfo:null, //用户信息
   login:false, // 用户是否登录
+  latitude: '', // 当前位置纬度
+  longitude: '', // 当前位置经度
 }
 
 Vue.use(Vuex)

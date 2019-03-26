@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
       <!--<vue-event-calendar-lu-->
         <!--:title="'这是日期标题'"-->
@@ -46,4 +47,24 @@
 
 <style scoped>
 
+=======
+  <div class="ss-st">
+    <p>我是p元素</p>
+    <span>我是span元素</span>
+    <a href="###">我是链接</a>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "index"
+  }
+</script>
+
+<style lang="scss" scoped>
+
+  .box {
+    width:10px * 2;
+  }
+>>>>>>> 5c5124d382f5a452914d460f246e2fcb00ef4446
 </style>

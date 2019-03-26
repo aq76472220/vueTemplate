@@ -1,3 +1,6 @@
+export const RECORD_ADDRESS = 'RECORD_ADDRESS'//
+export const SAVE_GEOHASH = 'SAVE_GEOHASH'
 export const SAVE_ADDDETAIL = 'SAVE_ADDDETAIL' //新增地址
 export const RECORD_USERINFO = 'RECORD_USERINFO'
+
 
